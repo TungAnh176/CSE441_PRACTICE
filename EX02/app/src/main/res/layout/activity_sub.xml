@@ -27,7 +27,7 @@
             android:textStyle="normal"
             android:gravity="center"
             android:textColor="@android:color/holo_green_dark"
-            android:text="Xin chào"
+            android:text="Xin chào 63KTPM1"
             android:textSize="30dp"/>
 
         <Button
