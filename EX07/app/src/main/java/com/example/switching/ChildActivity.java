@@ -18,6 +18,12 @@ public class ChildActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_child);
         Button btn2 = (Button) findViewById(R.id.btnBack);
-
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(ChildActivity.this,MainActivity.class);
+                startActivity(intent1);
+            }
+        });
     }
 }
