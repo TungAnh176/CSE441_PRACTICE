@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     EditText edtA, edtB, edtKQ;
-    Button btnTong;
+    Button btnTong, btnHieu, btnTich, btnThuong;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,5 +32,37 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnHieu = findViewById(R.id.btnHieu);
+        btnHieu.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                int a = Integer.parseInt(edtA.getText().toString());
+                int b = Integer.parseInt(edtB.getText().toString());
+                int c = a - b;
+                edtKQ.setText(c+"");
+            }
+        });
+
+        btnTich = findViewById(R.id.btnTich);
+        btnTich.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                int a = Integer.parseInt(edtA.getText().toString());
+                int b = Integer.parseInt(edtB.getText().toString());
+                int c = a * b;
+                edtKQ.setText(c+"");
+            }
+        });
+
+        btnThuong = findViewById(R.id.bthThuong);
+        btnThuong.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                int a = Integer.parseInt(edtA.getText().toString());
+                int b = Integer.parseInt(edtB.getText().toString());
+                int c = a / b;
+                edtKQ.setText(c+"");
+            }
+        });
     }
 }
