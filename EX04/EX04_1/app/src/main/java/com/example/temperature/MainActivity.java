@@ -49,6 +49,12 @@ public class MainActivity extends AppCompatActivity {
                 edtC.setText(""+dcF.format((F-32)/1.8));
             }
         });
-        
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                edtC.setText("");
+                edtF.setText("");
+            }
+        });
     }
 }
