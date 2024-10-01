@@ -37,8 +37,22 @@ public class MainActivity extends AppCompatActivity {
                 double H = Double.parseDouble(edtChieuCao.getText().toString());
                 double W = Double.parseDouble(edtCanNang.getText().toString());
                 double BMI=W/(H*H);
-                
-
+                String chuandoan = "";
+                if (BMI < 18) {
+                    chuandoan = "Bạn gầy";
+                }
+                else if (BMI < 24.9) {
+                    chuandoan = "Bạn bình thường";
+                }
+                else if (BMI <= 29.9) {
+                    chuandoan = "Bạn béo phì độ 1";
+                }
+                else if (BMI <= 34.9) {
+                    chuandoan = "Bạn béo phì độ 2";
+                }
+                else {
+                    chuandoan = "Bạn béo phì độ 3";
+                }
             }
         });
     }
